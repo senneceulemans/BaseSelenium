@@ -10,7 +10,7 @@ public class DriverHandler {
     }
 
     public void navigateTo(String url){
-        driver.navigate().to(url);
+        driver.get(url);
     }
 
     public WebDriver getDriver() {

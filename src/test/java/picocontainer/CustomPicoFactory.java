@@ -1,5 +1,8 @@
 package picocontainer;
 
+import actions.UIAutomationAPI;
+import actions.UIKnowsTheGeneralActions;
+import actions.UIKnowsTheSearch;
 import io.cucumber.core.backend.ObjectFactory;
 import io.cucumber.picocontainer.PicoFactory;
 
@@ -7,7 +10,10 @@ public class CustomPicoFactory implements ObjectFactory {
     private final PicoFactory delegate = new PicoFactory();
 
     public CustomPicoFactory() {
-        //		addClass(UIKnowsTheBrowser.class);
+        System.out.println("this is test debug");
+        addClass(UIKnowsTheSearch.class);
+        addClass(UIAutomationAPI.class);
+        addClass(UIKnowsTheGeneralActions.class);
     }
 
     @Override

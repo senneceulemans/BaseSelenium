@@ -1,0 +1,81 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2022-02-24T14:43:09.877Z",
+        "before": [
+          {
+            "result": {
+              "duration": 6384000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "glue.hooks.UIHooks.beforeScenario(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "Search a product",
+        "description": "",
+        "id": "generaltests;search-a-product",
+        "after": [
+          {
+            "result": {
+              "duration": 944000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "glue.hooks.UIHooks.afterScenario(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1539000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user searches for product \"Allux Brievenbus 600 Zwart\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Allux Brievenbus 600 Zwart\"",
+                  "offset": 30
+                }
+              ],
+              "location": "glue.GeneralSteps.theUserSearchesForProduct(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 66000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the search result page is correct",
+            "match": {
+              "location": "glue.GeneralSteps.theSearchResultPageIsCorrect()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@localtest"
+          }
+        ]
+      }
+    ],
+    "name": "GeneralTests",
+    "description": "",
+    "id": "generaltests",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/tests.feature",
+    "tags": []
+  }
+]

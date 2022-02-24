@@ -1,18 +1,24 @@
 package pages;
 
 import helper.DriverHandler;
-import pages.blocks.Header;
+import org.openqa.selenium.support.FindBy;
+import ru.yandex.qatools.htmlelements.element.HtmlElement;
 
-public class HomePage extends BasePage implements CanSearch {
-    private Header header;
+
+public class HomePage extends HeaderPage {
+    @FindBy(css = ".consent-modal__footer .ui-btn--primary")
+    private HtmlElement btnAcceptCookie;
+
+    @FindBy(css = ".js-country-language-btn")
+    private HtmlElement btnAcceptLang;
 
     public HomePage(DriverHandler driverHandler) {
         super(driverHandler);
     }
 
-    @Override
-    public SearchResultPage searchProduct(String product) {
-       header.searchProduct(product);
-       return new SearchResultPage(driverHandler);
+
+    public void handleCookie() {
+        btnAcceptCookie.click();
+        btnAcceptLang.click();
     }
 }
